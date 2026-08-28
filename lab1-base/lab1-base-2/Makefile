@@ -14,8 +14,8 @@ flip.o: flip.c flip.h
 getopt.o: getopt.c
 	$(CC) $(CFLAGS) -c $*.c
 
-flip.man: flip.1
-	$(CC) $(CFLAGS) -C $*.c
+man: flip.1
+	nroff -man flip.1 > flip.man
 
 clean:
 	rm -rf *.o $(TARGET)
