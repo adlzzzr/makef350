@@ -1,6 +1,6 @@
 TARGET=main
 CC=gcc
-CFLAGS=- Wall -DBSD -DNDEBUG
+CFLAGS= -Wall -DBSD -DNDEBUG
 
 
 all:$(TARGET)
@@ -15,7 +15,7 @@ getop.o: getopt.c
 	$(CC) $(CFLAGS) -c $*.c
 
 flip.man: flip.1
-	$(CC) $(CLFAGS) -C $*.c
+	$(CC) $(CFLAGS) -C $*.c
 
 clean:
 	rm -rf *.o $(TARGET)
