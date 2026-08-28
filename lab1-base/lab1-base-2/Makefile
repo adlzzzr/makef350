@@ -5,13 +5,13 @@ CFLAGS= -Wall -DBSD -DNDEBUG
 
 all:$(TARGET)
 
-$(TARGET): flip.o getopt.c
+$(TARGET): flip.o getopt.o
 	$(CC) $(CFLAGS) -o $@ flip.o getopt.c
 
 flip.o: flip.c flip.h
 	$(CC) $(CFLAGS) -c $*.c
 
-getopt.c: getopt.c
+getopt.o: getopt.c
 	$(CC) $(CFLAGS) -c $*.c
 
 flip.man: flip.1
