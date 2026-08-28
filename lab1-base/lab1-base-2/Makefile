@@ -11,7 +11,7 @@ $(TARGET): flip.o getop.c
 flip.o: flip.c flip.h
 	$(CC) $(CFLAGS) -c $*.c
 
-getop.c: getop.C
+getop.c: getopt.C
 	$(CC) $(CFLAGS) -c $*.c
 
 flip.man: flip.1
